@@ -20,14 +20,81 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_main" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_medium_2">
+
+                <android.support.design.button.MaterialButton
+                    android:id="@+id/btn_material_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_material_button" />
+
+                <android.support.design.button.MaterialButton
+                    android:id="@+id/btn_material_button_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_medium_2"
+                    android:text="@string/lbl_material_button"
+                    app:icon="@drawable/ic_android_black_24dp"
+                    app:rippleColor="@android:color/holo_blue_bright" />
+
+                <android.support.design.button.MaterialButton
+                    android:id="@+id/btn_material_button_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_medium_2"
+                    android:text="@string/lbl_material_button"
+                    app:icon="@drawable/ic_android_black_24dp"
+                    app:rippleColor="@android:color/black"
+                    app:backgroundTint="@android:color/holo_green_light"
+                    />
+
+                <android.support.design.button.MaterialButton
+                    android:id="@+id/btn_material_button_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_medium_2"
+                    android:text="@string/lbl_material_button"
+                    app:strokeWidth="@dimen/margin_small"
+                    app:strokeColor="@android:color/black"
+                    />
+
+                <android.support.design.button.MaterialButton
+                    android:id="@+id/btn_material_button_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_medium_2"
+                    android:text="@string/lbl_material_button"
+                    app:cornerRadius="@dimen/margin_medium"
+                    />
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+    </LinearLayout>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        app:srcCompat="@android:drawable/ic_dialog_email"
+        android:layout_gravity="right|bottom"
+        android:layout_margin="@dimen/margin_medium_2"
+        />
+
 
 </android.support.design.widget.CoordinatorLayout>
